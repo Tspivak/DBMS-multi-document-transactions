@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:th="http://www.thymeleaf.org" 
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>TS multi-document transactions </title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/business-frontpage.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">TS multi-document transactions</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Register</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="bg-primary py-5 mb-5">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-lg-12">
+          <h1 class="display-4 text-white mt-5 mb-2">DBMS Final Project - TS</h1>
+          <p class="lead mb-5 text-white-50"> multi-document transactions</p>
+          <p class="lead mb-5 text-white-50"> by Itay Ta'asiri & Tomer Spivak</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-8 mb-5">
+        <h2>About</h2>
+        <hr>
+        <p>In this course of distributed database systems we chose the multi-document transaction process. The server side in Spring.io  with mongoDB (Primary & Replica)...So we chose to perform the demo -
+          On a transaction of transferring money from a client's account. Steps:
+          <br>
+          - Establishment of two sites, MongoDB, Primary and Replica.
+          <br>
+          - Creating a documentation update mechanism (CRUD) in various collections
+          <br>
+          - Developing a user interface (WEB) to display the process</p>
+      </div>
+      <div class="col-md-4 mb-5">
+        <h2>Login</h2>
+        <hr>
+        <form th:object="${accountTo}" class="needs-validation" novalidate method="POST" action="login">
+          <div class="row">
+            
+            <div class="col-md-6 mb-3">
+              <input  type="text"  class="form-control"  th:field="*{username}" id="username" placeholder="username" value="" required>
+              <div class="invalid-feedback">
+                Valid username is required.
+              </div>
+            </div>
+            
+
+                <div class="container">
+                <button class="btn btn-secondary btn-xl" type="submit">Sign in </button>
+                <a class="btn btn-secondary btn-xl" href="/register">Register </a>
+
+                 </div>
+          </div> 
+        </form>
+        
+      </div>
+    </div>
+    <!-- /.row -->
+
+    
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; TS</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
