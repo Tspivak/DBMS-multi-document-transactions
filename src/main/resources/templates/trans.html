@@ -72,7 +72,7 @@
 
 
                   <div class="container">
-                    <label for="value">How much to tranfer ? </label>
+                    <label for="value">How much to transfer ? </label>
                     <input  type="text"  class="form-control"  th:field="*{value}" id="value" placeholder="value" value="" style="width: 100px" required>
                     <div class="invalid-feedback">
                       Valid Balance is required.
@@ -81,7 +81,7 @@
                   </div>
                   <label style="display:none;" id="username" th:text="${username}" ></label>
 
-                  <h4>Select your account tranfer </h4>
+                  <h4>Select your account transfer </h4>
                   <table class="table table-hover" id="example"  style="width:300px">
                     <thead class="thead-dark">
                       <tr>
@@ -118,7 +118,7 @@
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; TS</p>
+      <p class="m-0 text-center text-white">Copyright &copy; TS - 2019</p>
     </div>
     <!-- /.container -->
   </footer>
@@ -147,16 +147,11 @@ $('#example tbody td').click(function() {
             data: _data,
             success: function(result){
               
-              
+              //////////// move to ////////////
               window.location = "http://localhost:8083/login";
-              
-              
-              
+                   
               }
         });
-  
-   
-
 });
 
 });
